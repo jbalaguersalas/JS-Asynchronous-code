@@ -25,12 +25,14 @@ async function getAllImagesByBreed2(breed) {
 }
 //5.
 async function getGitHubUserProfile(username) {
-    const response = await fetch (`https://api.github.com/users/&{username}`)
+    const response = await fetch (`https://api.github.com/users/${username}`)
     const data = await response.json();
-    return data.message
+    return data
 }
 //6.
+function printGithubUserProfile(username) {
 
+}
 //7.
 
 //8.
