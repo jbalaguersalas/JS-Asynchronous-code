@@ -30,9 +30,17 @@ async function getGitHubUserProfile(username) {
     return data
 }
 //6.
-function printGithubUserProfile(username) {
+async function printGithubUserProfile(username) {
+    const data = await getGitHubUserProfile(username);
+    const imagen = document.createElement(img);
+    imagen.src = data.avatar_url;
+    document.body.appendChild(imagen);
 
-}
+    const name = document.createElement("h1");
+    name.innerText = data.name;
+    document.body.appendChild(name);
+    return {img:data.avatar_url, name: data.name};
+}   
 //7.
 
 //8.
