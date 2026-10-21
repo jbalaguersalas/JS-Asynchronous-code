@@ -52,6 +52,6 @@ async function getAndPrintGitHubUserProfile(username) {
   </section>`;
 }
 //8.
-
+const name = document.createElement ("input")
 
 //9.
