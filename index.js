@@ -52,6 +52,10 @@ async function getAndPrintGitHubUserProfile(username) {
   </section>`;
 }
 //8.
-const name = document.createElement ("input")
+const input = document.createElement ("input"); 
+  input.type = "text";
+document.body.innerHTML += `<input type="text">`;
+
+const boton = document.createElement ("button"),
 
 //9.
