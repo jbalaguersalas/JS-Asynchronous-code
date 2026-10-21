@@ -42,7 +42,11 @@ async function printGithubUserProfile(username) {
     return {img:data.avatar_url, name: data.name};
 }   
 //7.
-
+async function getAndPrintGitHubUserProfile(username) {
+    const response = await fetch (getAndPrintGitHubUserProfile (`https://api.github.com/users/${username}`));
+    const data = await response.json
+    return(String)
+}
 //8.
 
 //9.
