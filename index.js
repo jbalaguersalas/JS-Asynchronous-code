@@ -43,13 +43,13 @@ async function printGithubUserProfile(username) {
 }
 //7.
 async function getAndPrintGitHubUserProfile(username) {
-  const response = await fetch(
-    getAndPrintGitHubUserProfile(`https://api.github.com/users/${username}`),
-  );
-  const data = response.json;
-  return <section>
-    
-  </section>;
+  const response = await fetch(`https://api.github.com/users/${username}`);
+  const data = await response.json();
+  return `<section>
+    <img src="${data.avatar_url}" alt="${data.name}">
+    <h1>${data.name}</h1>
+    <p>Public repos : ${data.public_repos}</p>
+  </section>`;
 }
 //8.
 
