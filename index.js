@@ -32,7 +32,7 @@ async function getGitHubUserProfile(username) {
 //6.
 async function printGithubUserProfile(username) {
   const data = await getGitHubUserProfile(username);
-  const imagen = document.createElement(img);
+  const imagen = document.createElement("img");
   imagen.src = data.avatar_url;
   document.body.appendChild(imagen);
 
@@ -48,9 +48,10 @@ async function getAndPrintGitHubUserProfile(username) {
   return `<section>
     <img src="${data.avatar_url}" alt="${data.name}">
     <h1>${data.name}</h1>
-    <p>Public repos : ${data.public_repos}</p>
+    <p>Public repos: ${data.public_repos}</p>
   </section>`;
 }
 //8.
+
 
 //9.
