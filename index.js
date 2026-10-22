@@ -67,8 +67,15 @@ window.addEventListener("load", () => {
 });
 
 //9.
-const usuarios = ["Pablo","Carlos","Marcos","Kevin"]
+const usuarios = ["Pablo","octocat","Marcos","Kevin"]
 async function fetchGithubUsers(usernames) {
 const promesas = usernames.map((name) => fetch(`https://api.github.com/users/${name}`));
-await Promise.all(promesas)
+const respuestasPromise = await Promise.all(promesas);
+
+for (const resultado of respuestasPromise) {
+  const usuario = await resultado.json();
+  console.log(usuario.html_url);
+  console.log(usuario.name)
+}
+fetchGithubUsers(usuarios);
 }
