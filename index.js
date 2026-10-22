@@ -52,10 +52,18 @@ async function getAndPrintGitHubUserProfile(username) {
   </section>`;
 }
 //8.
-const input = document.createElement ("input"); 
+window.addEventListener("load", () => {
+  const input = document.createElement("input");
   input.type = "text";
-document.body.innerHTML += `<input type="text">`;
+  document.body.appendChild(input);
 
-const boton = document.createElement ("button");
- 
+  const boton = document.createElement("button");
+  boton.innerText = "Buscar";
+  document.body.appendChild(boton);
+
+  boton.addEventListener("click", () => {
+    getAndPrintGitHubUserProfile(input.value);
+  });
+});
+
 //9.
