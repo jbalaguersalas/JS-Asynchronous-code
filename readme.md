@@ -23,12 +23,6 @@ Bikram del bootcamp Full Stack de The Bridge para practicar peticiones a APIs co
 
 Abre `index.html` en el navegador. Los tests de Jasmine hacen peticiones reales a las APIs, así que necesitas internet. GitHub solo deja hacer 60 peticiones por hora sin token, y si recargas la página muchas veces seguidas algunos tests pueden fallar por ese límite.
 
-## Qué he aprendido
-
-- `fetch` devuelve una promesa y `response.json()` devuelve otra. Por eso en cada función escribo dos `await`: uno para la respuesta y otro para los datos.
-- Una función `async` devuelve una promesa aunque dentro ponga `return data.message`. Quien la use tiene que esperarla con `await` o con `.then()`.
-- Con `Promise.all()` lanzo todas las peticiones a la vez y espero a que terminen antes de leer los resultados.
-
 ## Enunciado original
 
 ![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png  "logotipo de The Bridge")
@@ -77,7 +71,6 @@ Utiliza la API (https://dog.ceo/dog-api/) para resolver estos ejercicios.
 ```
 
 - [ ] 8.- Manipulación del DOM: Crea un input de tipo texto, y un botón buscar. El usuario escribirá en el input el nombre de usuario de GitHub que quiera buscar. Después llamaremos a la función **getAndPrintGitHubUserProfile(username)** que se ejecute cuando se pulse el botón buscar.(Esto no se testea).
-
 
 ##### GitHub API (II)- Promesas, promesas y más promesas ###
 
